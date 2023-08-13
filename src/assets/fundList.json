@@ -1,13 +1,15 @@
 [
     {
       "id": 0,
-      "fundName": "Affin Hwang Aiiman Enhanced i-Profit Fund",
-      "description": "The Fund aims to provide short-term liquidity and income, whilst maintaining capital stability by investing in a diversified portfolio of Islamic money market instruments, short-term sukuk and/or Islamic Deposits.",
+      "fundName": "Affin Hwang Iman Fund",
+      "description": "Affin Hwang Iman Fund description to describe the fund",
       "investmentType": "Islamic Money Market",
       "currentNAV": "1.0219",
       "currency": "MYR",
+      "fundSize": "312,123",
       "shariahCompliance": "Yes",
       "RiskRating": "Low",
+      "SubscriptionStatus": "Active",
       "HistoryData" : [
         {
           "id": 1,
@@ -32,12 +34,14 @@
     {
       "id": 1,
       "fundName": "Affin Hwang AHAM",
-      "description": "The Fund aims to provide short-term liquidity and income, whilst maintaining capital stability by investing in a diversified portfolio of Islamic money market instruments, short-term sukuk and/or Islamic Deposits.",
+      "description": "Affin Hwang AHAM description to describe the fund",
       "investmentType": "Bond",
       "currentNAV": "0.3019",
       "currency": "MYR",
+      "fundSize": "312,123",
       "shariahCompliance": "Yes",
       "RiskRating": "Very Low",
+      "SubscriptionStatus": "Active",
       "HistoryData" : [
         {
           "id": 1,
@@ -61,13 +65,15 @@
     },
     {
       "id": 2,
-      "fundName": "Affin Hwang SGD Bond Fund",
-      "description": "The Fund aims to provide short-term liquidity and income, whilst maintaining capital stability by investing in a diversified portfolio of Islamic money market instruments, short-term sukuk and/or Islamic Deposits.",
+      "fundName": "Affin Hwang SGD Feeder Fund",
+      "description": "Affin Hwang SGD Feeder Fund description to describe the fund",
       "investmentType": "Feeder Fund",
       "currentNAV": "2.5218",
       "currency": "SGD",
+      "fundSize": "312,123",
       "shariahCompliance": "No",
       "RiskRating": "Very High",
+      "SubscriptionStatus": "Active",
       "HistoryData" : [
         {
           "id": 1,
@@ -92,12 +98,14 @@
     {
       "id": 3,
       "fundName": "Affin Hwang World Series",
-      "description": "The Fund aims to provide short-term liquidity and income, whilst maintaining capital stability by investing in a diversified portfolio of Islamic money market instruments, short-term sukuk and/or Islamic Deposits.",
+      "description": "Affin Hwang World Series description to describe the fund",
       "investmentType": "Fixed Income",
       "currentNAV": "4.0219",
       "currency": "SGD",
+      "fundSize": "312,123",
       "shariahCompliance": "No",
       "RiskRating": "Moderate",
+      "SubscriptionStatus": "Active",
       "HistoryData" : [
         {
           "id": 1,
