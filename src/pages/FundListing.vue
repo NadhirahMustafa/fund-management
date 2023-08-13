@@ -14,7 +14,7 @@
               {{ fundList.shariahCompliance === 'Yes' ? constant.SHARIAH : constant.CONVENTIONAL }}
             </div>
             <div class="details-margin pink-border">
-              <div><b>Current NAV</b></div>
+              <div><b>{{text.CURRENT_NAV}}</b></div>
               <div>
                 {{ fundList.currency }} {{ fundList.currentNAV }}
               </div>
@@ -23,13 +23,13 @@
               style="background-color: transparent; border: none"
               @click="handleFundDetails(fundList)"
             >
-              View Details
+              {{ text.VIEW_DETAILS }}
             </button>
             <button
               style="background-color: transparent; border: none"
               @click="handleAddFund(fundList)"
             >
-              Add Amount
+              {{ text.ADD_AMOUNT }}
             </button>
 
             <div>
@@ -59,7 +59,8 @@
 import fundData from "../assets/fundList.json";
 import PopupComponent from "./PopupComponent.vue";
 import AddFund from "./AddFund.vue";
-import FundConstant from '../assets/fund.constant'
+import FundConstant from '../assets/fund.constant';
+import TextConstant from '../assets/text.constant';
 export default {
   name: "FundListing",
   data() {
@@ -71,7 +72,8 @@ export default {
       isSelectedId: 0,
       isSelectedDetails: null,
       isPopupAddVisible: false,
-      constant: FundConstant
+      constant: FundConstant,
+      text: TextConstant
     };
   },
   components: {

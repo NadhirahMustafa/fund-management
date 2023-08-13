@@ -2,12 +2,13 @@
   <div class="popup-overlay" @click="closePopup">
     <div class="popup-container" @click.stop>
       <h2>
-        <div class="details-margin">
+        <div class="details-margin popup-title">
           <b>{{ dataJson.fundName }}</b>
         </div>
       </h2>
-      <div class="details-margin">
-        <div>Unit to purchase:</div>
+      <div class="divider" />
+      <div class="details-arr details-margin">
+        <div class="label">{{ text.UNIT_TO_PURCHASE }}</div>
         <input
           type="text"
           id="text-input"
@@ -15,18 +16,22 @@
           @input="handleUnitInput"
         />
       </div>
-      <div class="details-margin">
-        <div>Amount:</div>
-        {{ totalPrice.toFixed(2) }}
+      <div class="divider" />
+      <div class="details-arr details-margin">
+        <div class="label">{{ text.AMOUNT }}</div>
+        <div>{{ totalPrice.toFixed(2) }}</div>
       </div>
-      <slot></slot>
-      <button @click="closePopup">Add</button
-      ><button @click="closePopup">Close</button>
+
+      <div class="divider" />
+      <button class="button-margin" @click="closePopup">
+        {{ text.PROCEED_TO_PAYMENT }}</button
+      ><button @click="closePopup">{{ text.CANCEL }}</button>
     </div>
   </div>
 </template>
 
 <script>
+import TextConstant from "../assets/text.constant";
 import unitPrice from "../assets/unitPrice.json";
 export default {
   name: "AddFund",
@@ -34,6 +39,7 @@ export default {
     return {
       dataFetched: false,
       pricePerUnit: [],
+      text: TextConstant,
       totalPrice: 0,
     };
   },
@@ -61,7 +67,6 @@ export default {
       this.inputText = event.target.value;
       this.totalPrice =
         Number(this.inputText) * Number(this.pricePerUnit.unitPrice);
-        
     },
   },
 };
@@ -87,6 +92,26 @@ export default {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 .details-margin {
+  margin: 10px;
+}
+.details-arr {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+
+.popup-title {
+  font-size: larger;
+  color: brown;
+}
+.divider {
+  border-top: 1px black solid;
+}
+.label {
+  margin-right: 5px;
+  font-weight: bold;
+}
+.button-margin {
   margin: 10px;
 }
 </style>

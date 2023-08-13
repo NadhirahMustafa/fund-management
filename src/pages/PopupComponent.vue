@@ -12,33 +12,33 @@
           {{ dataJson.description }}
         </div>
         <div class="details-arr details-margin">
-          <div class="label">Fund size:</div>
+          <div class="label">{{ text.FUND_SIZE }}</div>
           <div>{{ dataJson.currency }} {{ dataJson.fundSize }}</div>
         </div>
         <div class="details-arr details-margin">
-          <div class="label">Investment Type:</div>
+          <div class="label">{{ text.INVESTMENT_TYPE }}</div>
           <div>
             {{ dataJson.investmentType }}
           </div>
         </div>
         <div class="details-arr details-margin">
-          <div class="label">Shariah Compliance:</div>
+          <div class="label">{{ text.SHARIAH_COMPLIANCE }}</div>
           <div>
             {{ dataJson.shariahCompliance }}
           </div>
         </div>
         <div class="details-arr details-margin">
-          <div class="label">Current NAV:</div>
+          <div class="label">{{ text.CURRENT_NAV }}</div>
           <div>{{ dataJson.currency }} {{ dataJson.currentNAV }}</div>
         </div>
         <div class="details-arr details-margin">
-          <div class="label">Risk Rating:</div>
+          <div class="label">{{ text.RISK_RATING }}</div>
           <div>
             {{ dataJson.RiskRating }}
           </div>
         </div>
         <div class="details-arr details-margin">
-          <div class="label">Subscription Status:</div>
+          <div class="label">{{ text.SUBSCRIPTION_STATUS }}:</div>
           <div>
             {{ dataJson.SubscriptionStatus }}
           </div>
@@ -46,17 +46,17 @@
       </div>
       <div class="divider" />
       <div class="details-arr details-margin">
-        <div class="table-title">Funds History</div>
+        <div class="table-title">{{ text.FUNDS_HISTORY }}</div>
       </div>
       <table class="table-margin">
         <thead>
           <tr>
-            <th>Currency</th>
-            <th>Ex-Date</th>
-            <th>Reinvestment Date</th>
-            <th>Payment Date</th>
-            <th>Distribution</th>
-            <th>Yield</th>
+            <th>{{ text.CURRENCY }}</th>
+            <th>{{ text.EX_DATE }}</th>
+            <th>{{ text.REINVESTMENT_DATE }}</th>
+            <th>{{ text.PAYMENT_DATE }}</th>
+            <th>{{ text.DISTRIBUTION }}</th>
+            <th>{{ text.YIELD }}</th>
           </tr>
         </thead>
         <tbody>
@@ -77,7 +77,13 @@
 </template>
 
 <script>
+import TextConstant from '../assets/text.constant';
 export default {
+  data() {
+    return {
+      text: TextConstant      
+    };
+  },
   props: {
     id: Number,
     dataJson: {
