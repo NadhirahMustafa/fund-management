@@ -1,0 +1,34 @@
+[
+    {
+      "id": 0,
+      "fundName": "John",
+      "description": "desc",
+      "investmentType": "inv",
+      "performanceHistory": "perf",
+      "currentNAV": "1234"
+    },
+    {
+      "id": 1,
+      "fundName": "Jane",
+      "description": "desc",
+      "investmentType": "inv",
+      "performanceHistory": "perf",
+      "currentNAV": "1234"
+    },
+    {
+      "id": 2,
+      "fundName": "Jack",
+      "description": "desc",
+      "investmentType": "inv",
+      "performanceHistory": "perf",
+      "currentNAV": "1234"
+    },
+    {
+      "id": 3,
+      "fundName": "Jill",
+      "description": "desc",
+      "investmentType": "inv",
+      "performanceHistory": "perf",
+      "currentNAV": "1234"
+    }
+  ]
