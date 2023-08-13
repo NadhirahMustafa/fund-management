@@ -5,19 +5,19 @@
         <div class="card-grid">
           <div>
             <div class="details-margin">
-              <b>{{ fundList.fundName }}</b>
+              <b class="large-font">{{ fundList.fundName }}</b>
             </div>
-            <div class="details-margin">
-              {{ fundList.description }}
-            </div>
-            <div class="details-margin">
+            <div class="details-margin green-border">
               {{ fundList.investmentType }}
             </div>
-            <div class="details-margin">
-              {{ fundList.shariahCompliance }}
+            <div class="details-margin yellow-border">
+              {{ fundList.shariahCompliance === 'Yes' ? constant.SHARIAH : constant.CONVENTIONAL }}
             </div>
-            <div class="details-margin">
-              {{ fundList.currency }} {{ fundList.currentNAV }}
+            <div class="details-margin pink-border">
+              <div><b>Current NAV</b></div>
+              <div>
+                {{ fundList.currency }} {{ fundList.currentNAV }}
+              </div>
             </div>
             <button
               style="background-color: transparent; border: none"
@@ -59,6 +59,7 @@
 import fundData from "../assets/fundList.json";
 import PopupComponent from "./PopupComponent.vue";
 import AddFund from "./AddFund.vue";
+import FundConstant from '../assets/fund.constant'
 export default {
   name: "FundListing",
   data() {
@@ -70,6 +71,7 @@ export default {
       isSelectedId: 0,
       isSelectedDetails: null,
       isPopupAddVisible: false,
+      constant: FundConstant
     };
   },
   components: {
@@ -78,6 +80,7 @@ export default {
   },
   mounted() {
     this.fetchData();
+    
   },
   methods: {
     fetchData() {
@@ -108,15 +111,32 @@ export default {
 </script>
 
 <style scoped>
+.pink-border {
+  border: 1px rgb(253, 0, 177) dotted;
+  background-color: rgb(250, 131, 214);
+}
+.green-border {
+  border: 1px green dotted;
+  background-color: rgb(108, 248, 108);
+}
+.yellow-border {
+  border: 1px rgb(255, 187, 0) dotted;
+  background-color: rgb(253, 241, 209);
+}
+.large-font {
+  font-size: larger;
+}
 .card-grid {
   width: 200px;
   height: 100%;
-  font-size: 20px;
-  padding: 10px 8px 10px 8px;
+  margin: 10px 10px 10px 10px;
+  border-radius: 2%;
+  border: 1px rgb(173, 173, 173) ridge;
 }
 .card-arr {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .card-highlight {
   border: 1px rgb(252, 0, 21) solid;

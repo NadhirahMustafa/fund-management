@@ -61,7 +61,7 @@ export default {
       this.inputText = event.target.value;
       this.totalPrice =
         Number(this.inputText) * Number(this.pricePerUnit.unitPrice);
-      console.log("test: ", this.inputText, this.totalPrice, this.pricePerUnit);
+        
     },
   },
 };
