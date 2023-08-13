@@ -1,34 +1,122 @@
 [
     {
       "id": 0,
-      "fundName": "John",
-      "description": "desc",
-      "investmentType": "inv",
-      "performanceHistory": "perf",
-      "currentNAV": "1234"
+      "fundName": "Affin Hwang Aiiman Enhanced i-Profit Fund",
+      "description": "The Fund aims to provide short-term liquidity and income, whilst maintaining capital stability by investing in a diversified portfolio of Islamic money market instruments, short-term sukuk and/or Islamic Deposits.",
+      "investmentType": "Islamic Money Market",
+      "currentNAV": "1.0219",
+      "currency": "MYR",
+      "shariahCompliance": "Yes",
+      "RiskRating": "Low",
+      "HistoryData" : [
+        {
+          "id": 1,
+          "currency": "MYR",
+          "exDate": "26 May 2023",
+          "reinvestmentDate": "27 May 2023",
+          "paymentDate": "27 May 2023",
+          "distribution": "0.2000",
+          "yield": "0.20"
+        },
+        {
+          "id": 2,
+          "currency": "MYR",
+          "exDate": "26 May 2023",
+          "reinvestmentDate": "27 May 2023",
+          "paymentDate": "27 May 2023",
+          "distribution": "0.2000",
+          "yield": "0.20"
+        }
+      ]
     },
     {
       "id": 1,
-      "fundName": "Jane",
-      "description": "desc",
-      "investmentType": "inv",
-      "performanceHistory": "perf",
-      "currentNAV": "1234"
+      "fundName": "Affin Hwang AHAM",
+      "description": "The Fund aims to provide short-term liquidity and income, whilst maintaining capital stability by investing in a diversified portfolio of Islamic money market instruments, short-term sukuk and/or Islamic Deposits.",
+      "investmentType": "Bond",
+      "currentNAV": "0.3019",
+      "currency": "MYR",
+      "shariahCompliance": "Yes",
+      "RiskRating": "Very Low",
+      "HistoryData" : [
+        {
+          "id": 1,
+          "currency": "MYR",
+          "exDate": "26 June 2023",
+          "reinvestmentDate": "27 June 2023",
+          "paymentDate": "27 June 2023",
+          "distribution": "0.3000",
+          "yield": "0.30"
+        },
+        {
+          "id": 2,
+          "currency": "MYR",
+          "exDate": "26 June 2023",
+          "reinvestmentDate": "27 June 2023",
+          "paymentDate": "27 June 2023",
+          "distribution": "0.3000",
+          "yield": "0.30"
+        }
+      ]
     },
     {
       "id": 2,
-      "fundName": "Jack",
-      "description": "desc",
-      "investmentType": "inv",
-      "performanceHistory": "perf",
-      "currentNAV": "1234"
+      "fundName": "Affin Hwang SGD Bond Fund",
+      "description": "The Fund aims to provide short-term liquidity and income, whilst maintaining capital stability by investing in a diversified portfolio of Islamic money market instruments, short-term sukuk and/or Islamic Deposits.",
+      "investmentType": "Feeder Fund",
+      "currentNAV": "2.5218",
+      "currency": "SGD",
+      "shariahCompliance": "No",
+      "RiskRating": "Very High",
+      "HistoryData" : [
+        {
+          "id": 1,
+          "currency": "SGD",
+          "exDate": "26 July 2023",
+          "reinvestmentDate": "27 July 2023",
+          "paymentDate": "27 July 2023",
+          "distribution": "0.4000",
+          "yield": "0.40"
+        },
+        {
+          "id": 2,
+          "currency": "SGD",
+          "exDate": "26 July 2023",
+          "reinvestmentDate": "27 July 2023",
+          "paymentDate": "27 July 2023",
+          "distribution": "0.4000",
+          "yield": "0.40"
+        }
+      ]
     },
     {
       "id": 3,
-      "fundName": "Jill",
-      "description": "desc",
-      "investmentType": "inv",
-      "performanceHistory": "perf",
-      "currentNAV": "1234"
+      "fundName": "Affin Hwang World Series",
+      "description": "The Fund aims to provide short-term liquidity and income, whilst maintaining capital stability by investing in a diversified portfolio of Islamic money market instruments, short-term sukuk and/or Islamic Deposits.",
+      "investmentType": "Fixed Income",
+      "currentNAV": "4.0219",
+      "currency": "SGD",
+      "shariahCompliance": "No",
+      "RiskRating": "Moderate",
+      "HistoryData" : [
+        {
+          "id": 1,
+          "currency": "SGD",
+          "exDate": "26 August 2023",
+          "reinvestmentDate": "27 August 2023",
+          "paymentDate": "27 August 2023",
+          "distribution": "0.5000",
+          "yield": "0.50"
+        },
+        {
+          "id": 2,
+          "currency": "SGD",
+          "exDate": "26 August 2023",
+          "reinvestmentDate": "27 August 2023",
+          "paymentDate": "27 August 2023",
+          "distribution": "0.5000",
+          "yield": "0.50"
+        }
+      ]
     }
   ]

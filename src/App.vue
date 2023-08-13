@@ -1,20 +1,20 @@
 <template>
   <LandingPage pageTitle="Page title here"/>  
-  <FundDetails />
+  <FundListing />
   <HistoryDetails />
 </template>
 
 <script>
-import LandingPage from './components/LandingPage.vue'
-import FundDetails from './components/FundDetails.vue'
+import LandingPage from './pages/LandingPage.vue'
+import FundListing from './pages/FundListing.vue'
 // import HistoryDetails from './components/HistoryDetails.vue'
 
 export default {
   name: 'App',
   components: {
     LandingPage,
-    FundDetails
-  }
+    FundListing,
+    }
 }
 </script>
 
