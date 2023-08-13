@@ -1,12 +1,9 @@
 <template>
-  <div class="card-arr">
-    <div v-for="fundList in fundListing" :key="fundList.id">
-      <div class="card-grid">
-        <div>
-          <button
-            style="background-color: transparent; border: none"
-            @click="handleFundDetails(fundList)"
-          >
+  <div v-if="dataFetched">
+    <div class="card-arr">
+      <div v-for="fundList in fundListing" :key="fundList.id">
+        <div class="card-grid">
+          <div>
             <div class="details-margin">
               <b>{{ fundList.fundName }}</b>
             </div>
@@ -22,15 +19,35 @@
             <div class="details-margin">
               {{ fundList.currency }} {{ fundList.currentNAV }}
             </div>
-          </button>
+            <button
+              style="background-color: transparent; border: none"
+              @click="handleFundDetails(fundList)"
+            >
+              View Details
+            </button>
+            <button
+              style="background-color: transparent; border: none"
+              @click="handleAddFund(fundList)"
+            >
+              Add Amount
+            </button>
 
-          <div>
-            <PopupComponent
-              v-if="isPopupVisible"
-              @close="closePopup"
-              :id="isSelectedId"
-              :dataJson="isSelectedDetails"
-            />
+            <div>
+              <PopupComponent
+                v-if="isPopupVisible"
+                @close="closePopup"
+                :id="isSelectedId"
+                :dataJson="isSelectedDetails"
+              />
+            </div>
+            <div>
+              <AddFund
+                v-if="isPopupAddVisible"
+                @close="closePopup"
+                :id="isSelectedId"
+                :dataJson="isSelectedDetails"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -41,23 +58,35 @@
 <script>
 import fundData from "../assets/fundList.json";
 import PopupComponent from "./PopupComponent.vue";
+import AddFund from "./AddFund.vue";
 export default {
   name: "FundListing",
   data() {
     return {
-      fundListing: fundData,
+      dataFetched: false,
+      fundListing: [],
       showModal: false,
       isPopupVisible: false,
       isSelectedId: 0,
-      isSelectedDetails: null
+      isSelectedDetails: null,
+      isPopupAddVisible: false,
     };
   },
   components: {
     PopupComponent,
+    AddFund,
+  },
+  mounted() {
+    this.fetchData();
   },
   methods: {
+    fetchData() {
+      setTimeout(() => {
+        this.fundListing = fundData;
+        this.dataFetched = true;
+      }, 1000);
+    },
     handleFundDetails(fundList) {
-      console.log("button triggered");
       this.isSelectedId = fundList.id;
       this.isSelectedDetails = fundList;
       this.isPopupVisible = true;
@@ -67,12 +96,17 @@ export default {
     },
     closePopup() {
       this.isPopupVisible = false;
+      this.isPopupAddVisible = false;
+    },
+    handleAddFund(fundList) {
+      this.isSelectedId = fundList.id;
+      this.isSelectedDetails = fundList;
+      this.isPopupAddVisible = true;
     },
   },
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .card-grid {
   width: 200px;

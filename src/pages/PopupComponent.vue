@@ -1,14 +1,16 @@
 <template>
   <div class="popup-overlay" @click="closePopup">
     <div class="popup-container" @click.stop>
-      <h2>Hello from Popup</h2>
-      <p>This is some content inside the popup.</p>
-      <p>{{ id }}</p>
-      <div class="details-margin">
-        <b>{{ dataJson.fundName }}</b>
-      </div>
+      <h2>
+        <div class="details-margin">
+          <b>{{ dataJson.fundName }}</b>
+        </div>
+      </h2>
       <div class="details-margin">
         {{ dataJson.description }}
+      </div>
+      <div class="details-margin">
+        {{ dataJson.currency }} {{ dataJson.fundSize }}
       </div>
       <div class="details-margin">
         {{ dataJson.investmentType }}
@@ -22,6 +24,9 @@
       <div class="details-margin">
         {{ dataJson.riskRating }}
       </div>
+      <div class="details-margin">
+        {{ dataJson.SubscriptionStatus }}
+      </div>
       <table>
         <thead>
           <tr>
@@ -29,7 +34,7 @@
             <th>Ex-Date</th>
             <th>Reinvestment Date</th>
             <th>Payment Date</th>
-            <th>Disthibution</th>
+            <th>Distribution</th>
             <th>Yield</th>
           </tr>
         </thead>

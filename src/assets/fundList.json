@@ -6,8 +6,10 @@
       "investmentType": "Islamic Money Market",
       "currentNAV": "1.0219",
       "currency": "MYR",
+      "fundSize": "312,123",
       "shariahCompliance": "Yes",
       "RiskRating": "Low",
+      "SubscriptionStatus": "Active",
       "HistoryData" : [
         {
           "id": 1,
@@ -36,8 +38,10 @@
       "investmentType": "Bond",
       "currentNAV": "0.3019",
       "currency": "MYR",
+      "fundSize": "312,123",
       "shariahCompliance": "Yes",
       "RiskRating": "Very Low",
+      "SubscriptionStatus": "Active",
       "HistoryData" : [
         {
           "id": 1,
@@ -66,8 +70,10 @@
       "investmentType": "Feeder Fund",
       "currentNAV": "2.5218",
       "currency": "SGD",
+      "fundSize": "312,123",
       "shariahCompliance": "No",
       "RiskRating": "Very High",
+      "SubscriptionStatus": "Active",
       "HistoryData" : [
         {
           "id": 1,
@@ -96,8 +102,10 @@
       "investmentType": "Fixed Income",
       "currentNAV": "4.0219",
       "currency": "SGD",
+      "fundSize": "312,123",
       "shariahCompliance": "No",
       "RiskRating": "Moderate",
+      "SubscriptionStatus": "Active",
       "HistoryData" : [
         {
           "id": 1,
